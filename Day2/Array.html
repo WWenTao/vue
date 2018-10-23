@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function fn(){
+         return//return 有两个作用，一个打断函数的执行
+               //另一个返回给外界，不写return时返回默认
+         console.log(111)
+     }
+     var f=fn();
+     var ary=[1,2,3,4]
+     //ary[4]=5
+     //var n=ary.push(5,{},{},{},fn)
+     //给数组的末尾添加项
+     //返回值时改编后的数组长度
+     //console.log(n,ary)
+     //
+     //var item=ary.pop()//删除数组最后一项
+     //console.log(item)
+     var n=ary.unshift(100,9995,2054)//返回值时改编后的数组长度
+     console.log(n)//ary.shift()删除数组的首位
+
+     ary=[65,45,877,544,155,699]
+     ary.sort(function(a,b){
+         return a -b;//返回值a-b升序    b-a降序
+                     //sort的返回结果是排序好之后的数组
+     })
+     console.log(ary)
+
+
+     var ary = [];
+     var ary2 = [];
+     var ary3 = ary2;
+     console.log(ary == ary2)
+     console.log(ary3 === ary)
+
+     //reverse
+     //ary.reverse()   数组的反转，返回结果和原数组是同一地址
+     //forEach
+     ary=[200,15,425,155]
+     ary.forEach(function(item,index){
+        console.log(index);
+        // item 是循环的数组的每一项
+        //index 是循环的每一项的索引
+     })
+
+     //filter
+     ary =[10,20,30,40]
+     var ary2=ary.filter(function(item,index){
+         return item>20;
+     })
+</script>
